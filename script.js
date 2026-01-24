@@ -1,4 +1,4 @@
-// Select player elements
+
 const playBtn = document.getElementById("play");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
@@ -6,7 +6,6 @@ const songTitle = document.querySelector(".player .song");
 const songArtist = document.querySelector(".player small");
 const songImg = document.querySelector(".player img");
 
-// Array of songs (placeholder)
 const songs = [
   {
     title: "Sahiba",
@@ -36,19 +35,18 @@ const songs = [
 
 let currentSong = 0;
 
-// Create audio element
+// audio element
 let audio = new Audio();
 audio.src = songs[currentSong].audio;
 
-// Function to load song info
+// load song info
 function loadSong(index) {
   audio.src = songs[index].audio;
   songTitle.textContent = songs[index].title;
   songArtist.textContent = songs[index].artist;
   songImg.src = songs[index].img;
 }
-
-// Play or pause
+
 playBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
@@ -58,24 +56,21 @@ playBtn.addEventListener("click", () => {
     playBtn.textContent = "▶";
   }
 });
-
-// Previous song
+
 prevBtn.addEventListener("click", () => {
   currentSong = (currentSong - 1 + songs.length) % songs.length;
   loadSong(currentSong);
   audio.play();
   playBtn.textContent = "⏸";
 });
-
-// Next song
+
 nextBtn.addEventListener("click", () => {
   currentSong = (currentSong + 1) % songs.length;
   loadSong(currentSong);
   audio.play();
   playBtn.textContent = "⏸";
 });
-
-// Click on a card to play that song
+
 const cards = document.querySelectorAll(".card");
 cards.forEach((card, index) => {
   card.addEventListener("click", () => {
