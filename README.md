@@ -44,7 +44,7 @@ Due to limited development time, **JavaScript usage is currently minimal (approx
 ---
 
 ## 📁 Project Structure
-
+```plaintext
 apple-music-clone/
 │
 ├── index.html
@@ -56,7 +56,7 @@ apple-music-clone/
 │   ├── song2.mp3
 │   ├── song3.mp3
 │   └── song4.mp3
-
+```
 ---
 
 🚧 Project Status & Development Notes
@@ -96,5 +96,6 @@ Built with ❤️, curiosity, and continuous learning.
 📜 License
 
 This project is licensed under the MIT License.
+
 
 ⭐ If you like this project, consider giving it a star — it really helps!
