@@ -57,12 +57,14 @@ apple-music-clone/
 │   ├── song3.mp3
 │   └── song4.mp3
 
-
+---
 
 🚧 Project Status & Development Notes
 JavaScript is currently used only for essential functionality
 The bottom play button works, and sample songs are included
 Images may change on page refresh, as AI-generated placeholder images were used during rapid UI prototyping.
+
+---
 
 🔮 Future Enhancements (Planned)
 
@@ -73,15 +75,7 @@ Images may change on page refresh, as AI-generated placeholder images were used 
 🌐 Full-stack music streaming platform
 This project will be fully upgraded in the coming weeks.
 
-
-🚀 Deployment
-
-This project is deployed using Vercel.
-Deployment process:
-Push project to GitHub
-Import repository into Vercel
-Configure project name
-Deploy live
+---
 
 📌 Inspiration & Disclaimer
 
@@ -89,14 +83,20 @@ UI inspired by Apple Music (macOS).
 This project is created for educational and portfolio purposes only.
 No commercial use intended.
 
-🙌 Author
+---
+
+Author
 
 Anu
 Frontend Developer (in progress)
 Built with ❤️, curiosity, and continuous learning.
 
+---
+
 📜 License
 
 This project is licensed under the MIT License.
+
+---
 
 ⭐ If you like this project, consider giving it a star — it really helps!
