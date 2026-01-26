@@ -85,10 +85,10 @@ No commercial use intended.
 
 ---
 
-🙌 Author
+Author
 
 Anu
-Frontend Developer (in progress)
+Full stack Developer (in progress)
 Built with ❤️, curiosity, and continuous learning.
 
 ---
@@ -99,3 +99,4 @@ This project is licensed under the MIT License.
 
 
 ⭐ If you like this project, consider giving it a star — it really helps!
+
