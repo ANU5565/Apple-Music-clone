@@ -89,7 +89,7 @@ Author
 
 Anu
 Full stack Developer (in progress)
-Built with ❤️, curiosity, and continuous learning.
+Built with ❤️.
 
 ---
 
