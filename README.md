@@ -73,7 +73,7 @@ Images may change on page refresh, as AI-generated placeholder images were used 
 🧠 Increased JavaScript usage
 🔐 Backend integration (users, playlists, likes)
 🌐 Full-stack music streaming platform
-This project will be fully upgraded in the coming weeks.
+This project will be fully upgraded in the coming weeks
 
 ---
 
