@@ -60,6 +60,8 @@ body {
 }
 
 
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -79,7 +81,6 @@ body {
   margin: 30px 0 14px;
 }
 
-/* Horizontal Rows */
 .row {
   display: flex;
   gap: 20px;
@@ -97,7 +98,6 @@ body {
   border-radius: 10px;
 }
 
-/* Cards */
 .card {
   min-width: 180px;
   background: rgba(255,255,255,0.05);
@@ -128,8 +128,6 @@ body {
   font-size: 12px;
   color: var(--muted);
 }
-
-/* Player */
 .player {
   position: fixed;
   bottom: 0;
@@ -179,14 +177,11 @@ h2 {
   margin-bottom: 16px;
 }
 
-/* Horizontal Rows */
 .row {
   display: flex;
   gap: 18px;
   overflow-x: auto;
 }
-
-/* Big Cards */
 .big-row .card {
   min-width: 320px;
   position: relative;
@@ -210,17 +205,13 @@ h2 {
   color: #aaa;
   margin-top: 6px;
 }
-
-/* Normal Cards */
 .card {
   min-width: 160px;
 }
-
 .card img {
   width: 100%;
   border-radius: 14px;
 }
-
 .card p {
   font-size: 13px;
   margin-top: 6px;
@@ -381,5 +372,6 @@ h2 {
 
   z-index: 2;
 }
+
 
 
