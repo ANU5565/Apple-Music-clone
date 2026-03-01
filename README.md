@@ -22,7 +22,7 @@ Due to limited development time, **JavaScript usage is currently minimal (approx
 
 ---
 
-## ✨ Key Features...
+## ✨ Key Features
 
 - 🎧 Apple Music–style dark theme UI
 - 🧊 macOS-style frosted glass sidebar
@@ -99,5 +99,6 @@ This project is licensed under the MIT License.
 
 
 ⭐ If you like this project, consider giving it a star — it really helps!
+
 
 
