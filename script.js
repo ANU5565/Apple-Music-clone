@@ -1,3 +1,7 @@
+// Initialize Supabase Client
+const SUPABASE_URL = 'https://supabase.com/dashboard/project/pvwsdbgaixmoxvigcjvr'; // e.g. https://xyz.supabase.co
+const SUPABASE_ANON_KEY = 'sb_publishable_vco4Jo8bMmf1ZO6lNfkNYw_m9bEu2ra';
+const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const playBtn = document.getElementById("play");
 const prevBtn = document.getElementById("prev");
@@ -6,47 +10,40 @@ const songTitle = document.querySelector(".player .song");
 const songArtist = document.querySelector(".player small");
 const songImg = document.querySelector(".player img");
 
-const songs = [
-  {
-    title: "Sahiba",
-    artist: "Aditya Rikhari",
-    img: "https://picsum.photos/100?1",
-    audio: "audio/song1.mp3"
-  },
-  {
-    title: "Blinding Lights",
-    artist: "The Weeknd",
-    img: "https://picsum.photos/100?2",
-    audio: "audio/song2.mp3"
-  },
-  {
-    title: "Brooklyn Baby",
-    artist: "Lana Del Rey",
-    img: "https://picsum.photos/100?3",
-    audio: "audio/song3.mp3"
-  },
-  {
-    title: "arz kiya",
-    artist: "Anuv Jain",
-    img: "https://picsum.photos/100?4",
-    audio: "audio/song4.mp3"
-  }
-];
-
+let songs = [];
 let currentSong = 0;
-
-// audio element
 let audio = new Audio();
-audio.src = songs[currentSong].audio;
+
+// Fetch songs from Supabase
+async function fetchSongs() {
+  const { data, error } = await supabase
+    .from('songs')
+    .select('*')
+    .order('id', { ascending: true });
+
+  if (error) {
+    console.error('Error fetching songs:', error);
+    return;
+  }
+
+  songs = data;
+  
+  // Set the initial song once data is loaded
+  if (songs.length > 0) {
+    audio.src = songs[currentSong].audio;
+    loadSong(currentSong);
+  }
+}
 
 // load song info
 function loadSong(index) {
+  if (!songs[index]) return;
   audio.src = songs[index].audio;
   songTitle.textContent = songs[index].title;
   songArtist.textContent = songs[index].artist;
   songImg.src = songs[index].img;
 }
-
+
 playBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
@@ -56,21 +53,21 @@ playBtn.addEventListener("click", () => {
     playBtn.textContent = "▶";
   }
 });
-
+
 prevBtn.addEventListener("click", () => {
   currentSong = (currentSong - 1 + songs.length) % songs.length;
   loadSong(currentSong);
   audio.play();
   playBtn.textContent = "⏸";
 });
-
+
 nextBtn.addEventListener("click", () => {
   currentSong = (currentSong + 1) % songs.length;
   loadSong(currentSong);
   audio.play();
   playBtn.textContent = "⏸";
 });
-
+
 const cards = document.querySelectorAll(".card");
 cards.forEach((card, index) => {
   card.addEventListener("click", () => {
@@ -82,3 +79,6 @@ cards.forEach((card, index) => {
     }
   });
 });
+
+// Call the fetch function to run on start
+fetchSongs();
