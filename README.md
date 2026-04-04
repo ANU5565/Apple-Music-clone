@@ -2,7 +2,7 @@
 ![Work in Progress](https://img.shields.io/badge/status-work%20in%20progress-fa2d48)
 
 A modern **Apple Music–inspired web interface** built using **HTML, CSS, and minimal JavaScript**, focusing on clean UI, smooth interactions, and macOS-style design aesthetics.  
-This project is actively under development and will evolve into a **full-stack music streaming application**
+This project is actively under development and will evolve into a **full-stack music streaming application**.
 
 ---
 
